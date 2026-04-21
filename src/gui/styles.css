@@ -1,0 +1,256 @@
+/* ============================================================
+   UrlMe — Estilos globales
+   ============================================================ */
+
+/* Base */
+QWidget {
+    background-color: #F0EDE8;
+    color: #3D3830;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+}
+
+/* ── Pestañas ──────────────────────────────────────────────── */
+QTabWidget::pane {
+    border: none;
+    background-color: #F0EDE8;
+}
+
+QTabBar::tab {
+    background-color: transparent;
+    color: #9A9389;
+    padding: 11px 22px;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+    color: #4A3F35;
+    border-bottom: 2px solid #8C7B6A;
+    background-color: transparent;
+}
+
+QTabBar::tab:hover:selected {
+    color: #6B6058;
+}
+
+/* ── Inputs y combos ───────────────────────────────────────── */
+QLineEdit, QComboBox {
+    background-color: #FFFFFF;
+    border: 1px solid #D5CEC4;
+    border-radius: 8px;
+    padding: 0 12px;
+    font-size: 13px;
+    color: #3D3830;
+    background-color: #C8BEAF;
+}
+
+QLineEdit:focus {
+    border: 1.5px solid #9C8876;
+    background-color: #FFFFFF;
+}
+
+QLineEdit::placeholder {
+    color: #B0A89E;
+}
+
+QComboBox {
+    padding-right: 8px;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 28px;
+}
+
+QComboBox::down-arrow {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #8C7B6A;
+    margin-right: 10px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    border: 1px solid #D5CEC4;
+    border-radius: 8px;
+    padding: 4px;
+    background-color: #EDE9E2;
+    color: #3D3830;
+    outline: none;
+}
+
+/* ── Botones secundarios ───────────────────────────────────── */
+QPushButton {
+    background-color: #E8E2DA;
+    border: 1px solid #D5CEC4;
+    border-radius: 8px;
+    padding: 0 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4A3F35;
+}
+
+QPushButton:hover {
+    background-color: #DDD6CC;
+    border-color: #C8C0B5;
+}
+
+QPushButton:pressed {
+    background-color: #D0C8BE;
+}
+
+QPushButton:disabled {
+    background-color: #ECEAE6;
+    border-color: #E0DDD8;
+    color: #C0BBB5;
+}
+
+/* ── Botón de acción principal ─────────────────────────────── */
+QPushButton[class="action-btn"] {
+    background-color: #8C7B6A;
+    border: none;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+QPushButton[class="action-btn"]:hover {
+    background-color: #7D6D5E;
+}
+
+QPushButton[class="action-btn"]:pressed {
+    background-color: #6E5F51;
+}
+
+QPushButton[class="action-btn"]:disabled {
+    background-color: #C5BDB5;
+    color: #EDE9E4;
+}
+
+/* ── Etiquetas de campo ────────────────────────────────────── */
+QLabel[class="field-label"] {
+    font-size: 10px;
+    font-weight: 700;
+    color: #9A9389;
+    letter-spacing: 0.07em;
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 2px;
+}
+
+/* ── Encabezado de sección (tab Convertir) ─────────────────── */
+QLabel[class="section-header"] {
+    font-size: 16px;
+    font-weight: 600;
+    color: #3D3830;
+    background-color: transparent;
+}
+
+QLabel[class="section-subtitle"] {
+    font-size: 13px;
+    color: #8A8278;
+    background-color: transparent;
+    line-height: 1.5;
+}
+
+/* ── Ruta del archivo ──────────────────────────────────────── */
+QLabel[class="file-path-label"] {
+    font-size: 12px;
+    color: #8A8278;
+    background-color: #E8E2DA;
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+/* ── Etiqueta de estado (colores dinámicos via propiedad) ──── */
+QLabel[class="status-label"] {
+    font-size: 12px;
+    padding: 8px 12px;
+    border-radius: 7px;
+    background-color: transparent;
+    color: #8A8278;
+}
+
+QLabel[class="status-label"][status="success"] {
+    background-color: #E6F0DA;
+    color: #4A6E28;
+}
+
+QLabel[class="status-label"][status="error"] {
+    background-color: #F5E4E4;
+    color: #8C3030;
+}
+
+QLabel[class="status-label"][status="neutral"] {
+    background-color: #EDE9E2;
+    color: #6B6058;
+}
+
+/* ── Thumbnail placeholder ─────────────────────────────────── */
+QLabel[class="thumb-placeholder"] {
+    background-color: #DDD8D0;
+    border-radius: 10px;
+    color: #A09890;
+    font-size: 12px;
+}
+
+/* ── Overlay del título sobre la imagen ────────────────────── */
+QLabel[class="thumb-overlay"] {
+    background-color: rgba(30, 24, 18, 180);
+    color: #F5F2EE;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    line-height: 1.4;
+}
+
+/* ── Badges de metadatos ───────────────────────────────────── */
+QLabel[class="badge-format"] {
+    background-color: #DDF0D0;
+    color: #3A6618;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+QLabel[class="badge-source"] {
+    background-color: #E8E2DA;
+    color: #6B6058;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+/* ── Divisor vertical ──────────────────────────────────────── */
+QFrame[class="v-separator"] {
+    color: #D5CEC4;
+    max-width: 1px;
+}
+
+/* ── Scrollbars ────────────────────────────────────────────── */
+QScrollBar:vertical {
+    background: transparent;
+    width: 6px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #C8C0B5;
+    border-radius: 3px;
+    min-height: 20px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}

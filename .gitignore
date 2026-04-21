@@ -1,0 +1,28 @@
+# Archivos compilados de Python (Oculta las carpetas __pycache__ que se ven en tu imagen)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Configuraciones locales de tu editor de código
+.vscode/
+
+# Archivos de empaquetado (Vital para cuando uses PyInstaller)
+build/
+dist/
+*.spec
+*.exe
+
+# Entornos virtuales (Buena práctica por si decides aislar el proyecto después)
+venv/
+env/
+.env
+
+# Archivos multimedia (Evita subir accidentalmente canciones o videos si haces pruebas locales)
+*.mp4
+*.mp3
+*.m4a
+*.webm
+
+# Archivos ocultos generados por el sistema operativo
+Thumbs.db
+.DS_Store
