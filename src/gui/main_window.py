@@ -33,7 +33,7 @@ class MainWindow(QMainWindow):
         self.current_url_ready = ""
 
     # ------------------------------------------------------------------ #
-    #  TAB: DESCARGAR                                                      #
+    #  TAB: DESCARGAR                                                    #
     # ------------------------------------------------------------------ #
     def build_download_tab(self):
         tab = QWidget()
@@ -41,7 +41,7 @@ class MainWindow(QMainWindow):
         root.setContentsMargins(28, 28, 28, 28)
         root.setSpacing(0)
 
-        # ── Panel izquierdo ──────────────────────────────────────────────
+        # ── Panel izquierdo
         left = QVBoxLayout()
         left.setSpacing(6)
 
@@ -77,12 +77,12 @@ class MainWindow(QMainWindow):
         left.addStretch()
         left.addWidget(self.status_label_download)
 
-        # ── Divisor vertical ─────────────────────────────────────────────
+        # ── Divisor vertical 
         separator = QFrame()
         separator.setFrameShape(QFrame.Shape.VLine)
         separator.setProperty("class", "v-separator")
 
-        # ── Panel derecho ────────────────────────────────────────────────
+        # ── Panel derecho
         right = QVBoxLayout()
         right.setSpacing(10)
         right.setAlignment(Qt.AlignmentFlag.AlignTop)
@@ -146,7 +146,7 @@ class MainWindow(QMainWindow):
         return tab
 
     # ------------------------------------------------------------------ #
-    #  TAB: CONVERTIR                                                      #
+    #  TAB: CONVERTIR                                                    #
     # ------------------------------------------------------------------ #
     def build_convert_tab(self):
         tab = QWidget()
@@ -193,7 +193,7 @@ class MainWindow(QMainWindow):
         return tab
 
     # ------------------------------------------------------------------ #
-    #  LÓGICA                                                              #
+    #  LÓGICA                                                            #
     # ------------------------------------------------------------------ #
     def start_preview(self):
         url = self.url_input.text().strip()

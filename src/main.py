@@ -1,3 +1,6 @@
+# Forma gratuita y sin anuncios para descargar videos o audios a traves de sus URLs
+# - VA
+# Imports
 import sys
 import os
 from PyQt6.QtWidgets import QApplication

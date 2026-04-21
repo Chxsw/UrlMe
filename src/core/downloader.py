@@ -10,7 +10,6 @@ class UrlDownloader:
             os.makedirs(self.output_folder)
 
     def download_video(self, url):
-        """Descarga el video en la mejor calidad posible (mp4)."""
         ydl_opts = {
             'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
             'outtmpl': os.path.join(self.output_folder, '%(title)s.%(ext)s'),
@@ -25,7 +24,6 @@ class UrlDownloader:
             return False
 
     def download_audio(self, url):
-        """Extrae el audio directamente desde la URL y lo guarda como mp3."""
         ydl_opts = {
             'format': 'bestaudio/best',
             'outtmpl': os.path.join(self.output_folder, '%(title)s.%(ext)s'),
